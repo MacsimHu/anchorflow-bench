@@ -1,0 +1,2021 @@
+{
+  "schema": "anchorflow-company-h200-v1",
+  "code_sha256": "831c26829527d051e06c246a514b4798d615821766cfeb49d20bbea2fe2d2cc8",
+  "jobs": [
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "402906efb1c8cc1d88614b05e70624410666bde8801ed49fe7e493386a920f70",
+      "id": "402906efb1c8cc1d88614b05e70624410666bde8801ed49fe7e493386a920f70",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "9a01947b0de75f1d33e583026cd3d7869ccd1a36a11f60b0ced8a703f8491d70",
+      "id": "9a01947b0de75f1d33e583026cd3d7869ccd1a36a11f60b0ced8a703f8491d70",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "e25f04830d61eb3d51d2b8992f449d5eefaa125e96260f4e68b4ce5dc3b64b4a",
+      "id": "e25f04830d61eb3d51d2b8992f449d5eefaa125e96260f4e68b4ce5dc3b64b4a",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "61a40cfe313de06ef5b9a1ee073360d17709b7c0b816ea53d298a0ff42123a61",
+      "id": "61a40cfe313de06ef5b9a1ee073360d17709b7c0b816ea53d298a0ff42123a61",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "cab736ee21588395c147751dce5b7129b5285f7a0be110d3b6d55401fa3f682d",
+      "id": "cab736ee21588395c147751dce5b7129b5285f7a0be110d3b6d55401fa3f682d",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "b6e2ee5cce58d4607624c701f8b2c00a369c801af484edc6b17e378f4a34773b",
+      "id": "b6e2ee5cce58d4607624c701f8b2c00a369c801af484edc6b17e378f4a34773b",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "7af2325e48475cd105d8e4a5986e6ed55af9e625a4027e46a31330718dfeb3b4",
+      "id": "7af2325e48475cd105d8e4a5986e6ed55af9e625a4027e46a31330718dfeb3b4",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "c6ec074d004ee34efcfb2a643604615ec4c6a48ffce84dd7e4b002387c30a38a",
+      "id": "c6ec074d004ee34efcfb2a643604615ec4c6a48ffce84dd7e4b002387c30a38a",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "f07e63b00768432d1b547c30709570333b97528c4759449e0dd3bb5f6dcdbfd0",
+      "id": "f07e63b00768432d1b547c30709570333b97528c4759449e0dd3bb5f6dcdbfd0",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "bf08f4da49a5dc5c59ae1ef829332ff78dde59d66d86f8fef382ef4b05cb3817",
+      "id": "bf08f4da49a5dc5c59ae1ef829332ff78dde59d66d86f8fef382ef4b05cb3817",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "1b946ae99e1695cb7b58d8651484c77d88193c022c6ebd9cc0211f3f48d5d9be",
+      "id": "1b946ae99e1695cb7b58d8651484c77d88193c022c6ebd9cc0211f3f48d5d9be",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "70e4c3807b0ecaa0ec7bbaac166302d0f3c1162905c9f685b74c7853e6375a7e",
+      "id": "70e4c3807b0ecaa0ec7bbaac166302d0f3c1162905c9f685b74c7853e6375a7e",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "1fc2ba880fa9bdc250b22b2b7660e950fe9804b7abb03f089eae3bb09431c928",
+      "id": "1fc2ba880fa9bdc250b22b2b7660e950fe9804b7abb03f089eae3bb09431c928",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "fcdc619d20e1dd59e7e6a8aa3f33deb0da0a4bab95b58e779d2feadc8d846ef0",
+      "id": "fcdc619d20e1dd59e7e6a8aa3f33deb0da0a4bab95b58e779d2feadc8d846ef0",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "906295aae89fdfc5ab04f1fa0a9db8b52ad406225e2090241e9af484cb45f343",
+      "id": "906295aae89fdfc5ab04f1fa0a9db8b52ad406225e2090241e9af484cb45f343",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "3fbb86eda56a0680ec5884937ae9f981776834e090f16a1f29c643c91ee74b31",
+      "id": "3fbb86eda56a0680ec5884937ae9f981776834e090f16a1f29c643c91ee74b31",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "7e223e17de91508ebc6f54d4baac0291d580b987dbc35f8d6c475b377b49e64d",
+      "id": "7e223e17de91508ebc6f54d4baac0291d580b987dbc35f8d6c475b377b49e64d",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "49e883e460a8ff1ad46e0dbc02c4c3ffcf157fa55e2c46ea56ca100919cf77a6",
+      "id": "49e883e460a8ff1ad46e0dbc02c4c3ffcf157fa55e2c46ea56ca100919cf77a6",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "1ac63c2b7ea1cc943a8fddb60def85d08bf6818280c09416541096b0f2c8284c",
+      "id": "1ac63c2b7ea1cc943a8fddb60def85d08bf6818280c09416541096b0f2c8284c",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "72d4b4627be715846796c315470e50883135cb67b06114d9d14708de3f99d155",
+      "id": "72d4b4627be715846796c315470e50883135cb67b06114d9d14708de3f99d155",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "5db81d005b11a4ae4b6b5164ffc9d8f95fa7e9a3cd73221a2e1756beaa88e6f6",
+      "id": "5db81d005b11a4ae4b6b5164ffc9d8f95fa7e9a3cd73221a2e1756beaa88e6f6",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "92579d8c5ab57e9bea810cf3f3926e7d6a384761c2c816d593f5607c80fc2e80",
+      "id": "92579d8c5ab57e9bea810cf3f3926e7d6a384761c2c816d593f5607c80fc2e80",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "31c3acc83f9ce627638750af7ce4573b50cdf61c24760d3e93510e54a8a2b125",
+      "id": "31c3acc83f9ce627638750af7ce4573b50cdf61c24760d3e93510e54a8a2b125",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "c8eafc40de04ab92555be3ca344c98261be2de7499d4de885a5409452ae6e4e0",
+      "id": "c8eafc40de04ab92555be3ca344c98261be2de7499d4de885a5409452ae6e4e0",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "334f4c3df829d29072e60d0a7273c638aa4fb7315166997536a648b1ff958a35",
+      "id": "334f4c3df829d29072e60d0a7273c638aa4fb7315166997536a648b1ff958a35",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "e548cb67459ba71620028a06c63be06e7bd795987c25afa4a3d7fb96076abf4d",
+      "id": "e548cb67459ba71620028a06c63be06e7bd795987c25afa4a3d7fb96076abf4d",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "c49c0f1a0d3e124fa97a07b653587d32fca5ab7489f703e81576c3dd2bfcf4be",
+      "id": "c49c0f1a0d3e124fa97a07b653587d32fca5ab7489f703e81576c3dd2bfcf4be",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "864ee4eb941d9909ddd90a23b13ed7064eb10af51202e83a2288dc521a288bdf",
+      "id": "864ee4eb941d9909ddd90a23b13ed7064eb10af51202e83a2288dc521a288bdf",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "8f90fdae7cf89b015800e2cc77b366d9d8d09689d3e45e166233a363bd3376ab",
+      "id": "8f90fdae7cf89b015800e2cc77b366d9d8d09689d3e45e166233a363bd3376ab",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "9c969d9be159b68a75fbe50bf445b2d525ccb365c74729d46ef05b50c268b291",
+      "id": "9c969d9be159b68a75fbe50bf445b2d525ccb365c74729d46ef05b50c268b291",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "d58e6bafebb400b331a6e2645f0bd42cd2c1c949b1e3081be79dc19f7d0c9139",
+      "id": "d58e6bafebb400b331a6e2645f0bd42cd2c1c949b1e3081be79dc19f7d0c9139",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "05c9805e05fba97ea4d18a9ba6efe3ee49dbfe89ac5bf65b89b73d20137ceebc",
+      "id": "05c9805e05fba97ea4d18a9ba6efe3ee49dbfe89ac5bf65b89b73d20137ceebc",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "f3d8cf5a6c5c99529c902e2f5e88e26fb4ed972d30f7614ab16398d098d1a81f",
+      "id": "f3d8cf5a6c5c99529c902e2f5e88e26fb4ed972d30f7614ab16398d098d1a81f",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "e235fadfcc21fd31679936ce84f23e015477f8d91d10059967793d928408d571",
+      "id": "e235fadfcc21fd31679936ce84f23e015477f8d91d10059967793d928408d571",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "a9a3b8ea763da23ea8f0603b6e96aece767179b35d819c6ad106962b508942f5",
+      "id": "a9a3b8ea763da23ea8f0603b6e96aece767179b35d819c6ad106962b508942f5",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "fe03c99e10307ff7fa29af092b9a192d5dea801e2d118e2ffd2ae9a3d4b7b014",
+      "id": "fe03c99e10307ff7fa29af092b9a192d5dea801e2d118e2ffd2ae9a3d4b7b014",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "53272a8e8a7ce2bc4becdb6a4d9dadb20d61dd437bcf0c9f6912a4822b7a5ee1",
+      "id": "53272a8e8a7ce2bc4becdb6a4d9dadb20d61dd437bcf0c9f6912a4822b7a5ee1",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "ef37e8c56872441be4374dabe9e31c4046dda6882db4a61c7fa03aef70dd2ff2",
+      "id": "ef37e8c56872441be4374dabe9e31c4046dda6882db4a61c7fa03aef70dd2ff2",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "b101e043f1746e6c0a86e954cd123301e51d2976f0ecac15415eb1fc3e6380fa",
+      "id": "b101e043f1746e6c0a86e954cd123301e51d2976f0ecac15415eb1fc3e6380fa",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "90c4f99ee2904b5dd4c73c5cf244a090d095a7fb8375ac86d782dc840076de4d",
+      "id": "90c4f99ee2904b5dd4c73c5cf244a090d095a7fb8375ac86d782dc840076de4d",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "b63f0b7b40d1f8c0fdc84e8048444cfb5d57d910463b98451e99ffd400666fb7",
+      "id": "b63f0b7b40d1f8c0fdc84e8048444cfb5d57d910463b98451e99ffd400666fb7",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "b89ed1b0a6219afc970a88715707b9331172e13d8862d24d427296864b87da6b",
+      "id": "b89ed1b0a6219afc970a88715707b9331172e13d8862d24d427296864b87da6b",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "bb5c2a0144252f4a9b17bb80a629a9a2e3f66a6d3df34c5fef122f1de8509494",
+      "id": "bb5c2a0144252f4a9b17bb80a629a9a2e3f66a6d3df34c5fef122f1de8509494",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "2ddaf12fb424b15f3ea56dd7c7a98c371ae1f0a2de2fd05eec3c012794fd410e",
+      "id": "2ddaf12fb424b15f3ea56dd7c7a98c371ae1f0a2de2fd05eec3c012794fd410e",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "acbad62b9bf31c0b1bf45fd60d0b7dec9d1d56d320d537e805a24a80498d63ed",
+      "id": "acbad62b9bf31c0b1bf45fd60d0b7dec9d1d56d320d537e805a24a80498d63ed",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Intact",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "2e6a2086db68d03990cad95357dd89b2571a332b40182673a0c188b0ecea8a3e",
+      "id": "2e6a2086db68d03990cad95357dd89b2571a332b40182673a0c188b0ecea8a3e",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Intact",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "563f2603caedf03fa66091f3db77de181e590969bbbd1d59ce20d84e58718026",
+      "id": "563f2603caedf03fa66091f3db77de181e590969bbbd1d59ce20d84e58718026",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Intact",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "662f92b147ae026bf5aa37f40c20480fb4d5ae608ca6a29578b77911e649bbd9",
+      "id": "662f92b147ae026bf5aa37f40c20480fb4d5ae608ca6a29578b77911e649bbd9",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Intact",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "74a577296838ab5439ecccdf9b4f746e577f567f11ccb478d95ce1c8e8d84cd1",
+      "id": "74a577296838ab5439ecccdf9b4f746e577f567f11ccb478d95ce1c8e8d84cd1",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Intact",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "07d995f8e73450f18820700727d88d44b125e84807115cc4fb7a27dd62667f06",
+      "id": "07d995f8e73450f18820700727d88d44b125e84807115cc4fb7a27dd62667f06",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "b7060fb574447bcd9651a74eabf26a82b70d89a3356c000991d3936303d3ca62",
+      "id": "b7060fb574447bcd9651a74eabf26a82b70d89a3356c000991d3936303d3ca62",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "f31302fd26251f41086a627118057500e2bf9463651482de35a080d54037ca5a",
+      "id": "f31302fd26251f41086a627118057500e2bf9463651482de35a080d54037ca5a",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "3a4169f992665669f5490c178ced1264edbe269f91f8f4fe0ed655837ccc2160",
+      "id": "3a4169f992665669f5490c178ced1264edbe269f91f8f4fe0ed655837ccc2160",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "a08e33100a80ad0e405167d6637f53842122e27d9ec5c70bf05259a6728ed645",
+      "id": "a08e33100a80ad0e405167d6637f53842122e27d9ec5c70bf05259a6728ed645",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Full",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "9b8e8cd4685d89f0d221e211f726b60c12646a0bdae55ed394264efa461ffa8a",
+      "id": "9b8e8cd4685d89f0d221e211f726b60c12646a0bdae55ed394264efa461ffa8a",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Mixed",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "97a5ffb808c6de40fbc74ac0a6310a03b139279182eeca700546d180825d6a0b",
+      "id": "97a5ffb808c6de40fbc74ac0a6310a03b139279182eeca700546d180825d6a0b",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Mixed",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "018e788043ada04fe09c148a30374898b51dc340e5a7b1574446fe753802e5ae",
+      "id": "018e788043ada04fe09c148a30374898b51dc340e5a7b1574446fe753802e5ae",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Mixed",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "fcdd76922c74de828cb8a19542cde4c0bd083c6e7bf63fa0ea3e568c5e24ec3a",
+      "id": "fcdd76922c74de828cb8a19542cde4c0bd083c6e7bf63fa0ea3e568c5e24ec3a",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Mixed",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "5b451989e86e03237c60404e5027f0b70645f651e2b5e92b0f1c27fbdf78c9d0",
+      "id": "5b451989e86e03237c60404e5027f0b70645f651e2b5e92b0f1c27fbdf78c9d0",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "main_native",
+      "priority": "P1",
+      "case": "case500",
+      "regime": "Mixed",
+      "method": "GENCO",
+      "variant": "Full",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "9dd4cb67b17c9aad6c05f0c83b256023f2e01ec3f53ee48e09447272350007fd",
+      "id": "9dd4cb67b17c9aad6c05f0c83b256023f2e01ec3f53ee48e09447272350007fd",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "genco_h48"
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "da1436f88e6a7a780f0f460fb178105dd1a1f7670d9998885ec257085bba6f1c",
+      "id": "da1436f88e6a7a780f0f460fb178105dd1a1f7670d9998885ec257085bba6f1c",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "e7df6769ef66d25cea97961b617bf73ec84c8e0eba22a6f5dca2fe18411e1f95",
+      "id": "e7df6769ef66d25cea97961b617bf73ec84c8e0eba22a6f5dca2fe18411e1f95",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "1ad35b77560e173694b8e048dc090b37976be2ea848fbb459b0687c3a61803a6",
+      "id": "1ad35b77560e173694b8e048dc090b37976be2ea848fbb459b0687c3a61803a6",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "7d31c42ea4e27e3a917e9c87e6754ddb4b7e865aff2a04c8dfc132fa833da063",
+      "id": "7d31c42ea4e27e3a917e9c87e6754ddb4b7e865aff2a04c8dfc132fa833da063",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "26ef0bb772477bf3d666aa99fc587bc65e45854e785995302bfd38dffe98b58e",
+      "id": "26ef0bb772477bf3d666aa99fc587bc65e45854e785995302bfd38dffe98b58e",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "c8f81138d251ce407ad4c9480478702c333c7ef97b9f2f74587b11c9ab55ed14",
+      "id": "c8f81138d251ce407ad4c9480478702c333c7ef97b9f2f74587b11c9ab55ed14",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "63e9482207d423418b776bd6292a62ac6be68c0a158fc5b2e2ae1c06fb6c0fe4",
+      "id": "63e9482207d423418b776bd6292a62ac6be68c0a158fc5b2e2ae1c06fb6c0fe4",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "7d4c3e3ecfd77129b3299b1ec214eced99371b12b8f16c985cde7cd0b4132bb6",
+      "id": "7d4c3e3ecfd77129b3299b1ec214eced99371b12b8f16c985cde7cd0b4132bb6",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "2fd6dd30408ef1205df45c7d8890efe4e46c8b857060375dfd6cfbcbf1a8cac9",
+      "id": "2fd6dd30408ef1205df45c7d8890efe4e46c8b857060375dfd6cfbcbf1a8cac9",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "ad863f1069c05829924bfa606de3aeb1d0f3c8c5f6911523124b1fa2b998ba47",
+      "id": "ad863f1069c05829924bfa606de3aeb1d0f3c8c5f6911523124b1fa2b998ba47",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "0d9f8e400a8be6c59184feaa9bddd13ab445a348e409f6e60d4effb473084f09",
+      "id": "0d9f8e400a8be6c59184feaa9bddd13ab445a348e409f6e60d4effb473084f09",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "4c210d09cf91227456e413a49ad413a3191fa18d7a6b0d64f39d7520c3bb19ea",
+      "id": "4c210d09cf91227456e413a49ad413a3191fa18d7a6b0d64f39d7520c3bb19ea",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "2b152a3333e72cab348d642928c07cccc512039b375851592e58be7ca92e080b",
+      "id": "2b152a3333e72cab348d642928c07cccc512039b375851592e58be7ca92e080b",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "f266145c5bea16a1c90ec0956ef49304e5344525c9bcdd770fe615895cc25a3c",
+      "id": "f266145c5bea16a1c90ec0956ef49304e5344525c9bcdd770fe615895cc25a3c",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "76b4d4412d09874449b6d41518c1deafed208b821d608417e7cc18ce961604f9",
+      "id": "76b4d4412d09874449b6d41518c1deafed208b821d608417e7cc18ce961604f9",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "9048d1592e519879aa1d6e4485bae1565bae3e625610efae7acd4caf7b1dd28a",
+      "id": "9048d1592e519879aa1d6e4485bae1565bae3e625610efae7acd4caf7b1dd28a",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "489e7cb2e73d048da12151e677483755dde7589cd60471039868daacd77208e3",
+      "id": "489e7cb2e73d048da12151e677483755dde7589cd60471039868daacd77208e3",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "e1508dbd471ca9a5aa3a3dd008404197c295fb1890d1ec0f1c77759502ed81d0",
+      "id": "e1508dbd471ca9a5aa3a3dd008404197c295fb1890d1ec0f1c77759502ed81d0",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "28bb196ae854be1cfd1202b4b4c02bcf892adfce8ce8c1a2f32efe15d75c5dcf",
+      "id": "28bb196ae854be1cfd1202b4b4c02bcf892adfce8ce8c1a2f32efe15d75c5dcf",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case30",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "b6c62a074e3b78a9e8e2b7bffea1ac3eee17a8b172bbfce63b6b47ffb0e37413",
+      "id": "b6c62a074e3b78a9e8e2b7bffea1ac3eee17a8b172bbfce63b6b47ffb0e37413",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "185f3a472fcda395dd171ab27c620269d96d5df40301463a21ff047e43d221c1",
+      "id": "185f3a472fcda395dd171ab27c620269d96d5df40301463a21ff047e43d221c1",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "a9f3b8b44e43618b3d48125cad4023475da89691cb81e72a0b14cd618b1c109c",
+      "id": "a9f3b8b44e43618b3d48125cad4023475da89691cb81e72a0b14cd618b1c109c",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "ef19dea988273bb6abcd65b0adbbef040f6f60e064ccd86ff971e413820c34c3",
+      "id": "ef19dea988273bb6abcd65b0adbbef040f6f60e064ccd86ff971e413820c34c3",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "846c59bb40d9d8a7bc08a2941802687330c43012f4e3fe8732842b58635306fb",
+      "id": "846c59bb40d9d8a7bc08a2941802687330c43012f4e3fe8732842b58635306fb",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "d40802fe862172055246801655d99ea9d39cfbebef4f1736a64d6bb014b8b831",
+      "id": "d40802fe862172055246801655d99ea9d39cfbebef4f1736a64d6bb014b8b831",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "37350f2493f8237cc360da47f295e1ec90e269f412e6ae67b37516b3ab58a0fe",
+      "id": "37350f2493f8237cc360da47f295e1ec90e269f412e6ae67b37516b3ab58a0fe",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "0a6a9929c45c7b671179c804ecc93ce1f0b5ca6f389a793f96558815c7163860",
+      "id": "0a6a9929c45c7b671179c804ecc93ce1f0b5ca6f389a793f96558815c7163860",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "506c0fad63b46f5ba8c9f841cc342d706b68e3e9089f80621c9182d5f6499822",
+      "id": "506c0fad63b46f5ba8c9f841cc342d706b68e3e9089f80621c9182d5f6499822",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "360ab2bd19df81a3b8551c56817ea29ae45c9ef9761670f883931dd853d952c5",
+      "id": "360ab2bd19df81a3b8551c56817ea29ae45c9ef9761670f883931dd853d952c5",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Intact",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "2b5f98888b53f10e8c404a9a5b0d72ec2a35825b58c93b92cf781f246058cf38",
+      "id": "2b5f98888b53f10e8c404a9a5b0d72ec2a35825b58c93b92cf781f246058cf38",
+      "task": "1.1",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "802ec457ea174f13729b07b018a7f20155852b08844f45fefa71f00e006989bb",
+      "id": "802ec457ea174f13729b07b018a7f20155852b08844f45fefa71f00e006989bb",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "44348260572bdd434b1e04441334afd317efa76e8862021c47fafe455ded713c",
+      "id": "44348260572bdd434b1e04441334afd317efa76e8862021c47fafe455ded713c",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "198dcdb6a35eea44447f3ee0b253da37c1ea985c029f9d12f0e70306a1656087",
+      "id": "198dcdb6a35eea44447f3ee0b253da37c1ea985c029f9d12f0e70306a1656087",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "a5cb5ba923e67f80578fc44a07a1c27011c40537d9178db82a459e38fa64bc96",
+      "id": "a5cb5ba923e67f80578fc44a07a1c27011c40537d9178db82a459e38fa64bc96",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Deferred",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "5a887de5813dbf96ab66757941ebe06912df0550e02d2b8e0a56bfd0723fe858",
+      "id": "5a887de5813dbf96ab66757941ebe06912df0550e02d2b8e0a56bfd0723fe858",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "deferred",
+        "coarse_weighting": "electrical",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 11,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "0661b04fec727abf3e1df396a448450787e936e8c43254776ed265bdcdb089af",
+      "id": "0661b04fec727abf3e1df396a448450787e936e8c43254776ed265bdcdb089af",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 22,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "26acf14c300953df9b94e6794c8bd15a1c6afd551b9547d47a0d5746ae83db4e",
+      "id": "26acf14c300953df9b94e6794c8bd15a1c6afd551b9547d47a0d5746ae83db4e",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 33,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "1d02533e4ded632b889e0bd56c4eaa5262cb222da71dd095f6120963d444afbb",
+      "id": "1d02533e4ded632b889e0bd56c4eaa5262cb222da71dd095f6120963d444afbb",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 44,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "64382d31f34c94265dee8ed8a5254ec9fdfe467223acc46330f46b814974163f",
+      "id": "64382d31f34c94265dee8ed8a5254ec9fdfe467223acc46330f46b814974163f",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    },
+    {
+      "block": "mechanism_core",
+      "priority": "P1",
+      "case": "case118",
+      "regime": "Mixed",
+      "method": "AnchorFlow",
+      "variant": "Unit weights",
+      "seed": 55,
+      "status": "requires_current_assignment_check",
+      "training_enabled": true,
+      "coordinate_sha256": "df2c5ed3de834d804634ad34a1aee66eb8775498489a73fffe054859a6530c17",
+      "id": "df2c5ed3de834d804634ad34a1aee66eb8775498489a73fffe054859a6530c17",
+      "task": "1.3",
+      "maximum_active_hours": 336,
+      "model_spec": {
+        "name": "circuitflow",
+        "coupling": "coupled",
+        "coarse_weighting": "unit",
+        "max_component_buses": 512
+      }
+    }
+  ],
+  "scientific_endpoint": "fixed H200, 152000 updates; secondary VAL selection separate",
+  "actual_runtime_must_be_recorded": true,
+  "automatic_successor": false,
+  "existing_assignment_and_reuse_check_required": true,
+  "nonimplemented_proposal_coordinates_remain_disabled": true
+}

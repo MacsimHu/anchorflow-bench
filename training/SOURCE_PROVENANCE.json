@@ -1,0 +1,74 @@
+{
+  "independent_project_not_a_fork": true,
+  "upstream_repository": "https://github.com/gridfm/gridfm-graphkit",
+  "upstream_commit": "0912c734b0912202e22aad79dde996ae0f1190a0",
+  "models": [
+    {
+      "original_file": "circuitflow.py",
+      "original_sha256": "94c026503dbb3cb1ae2523c20285be119b9df9f6b78de2d24624284164f3b961",
+      "distributed_file": "src/circuitflow/model.py",
+      "distributed_sha256": "1ea32f80ee8222de3d7d70c95ba707545845e6ec749239f54e3434613c522b69",
+      "numerical_expressions_changed": false
+    },
+    {
+      "original_file": "coarse_conditioning.py",
+      "original_sha256": "bfa3ef9cfdec6a7ccce2657de583852539d44592cb607422f8718ad2bdabbd42",
+      "distributed_file": "src/circuitflow/coarse_conditioning.py",
+      "distributed_sha256": "f0fe0890ebc97f130e75dc417705e6f7e4b014a798d56e32eba5c4696ad4d257",
+      "numerical_expressions_changed": false
+    },
+    {
+      "original_file": "genco/adapter.py",
+      "original_sha256": "1b6f8c9257da3c564474b326e31aee792b3f07adaa840561754b357a41fc3098",
+      "distributed_file": "src/circuitflow/genco/adapter.py",
+      "distributed_sha256": "020528a43bda978bd6518f200dcc6bc5a977e47cbbc3a13578e914d505fb341a",
+      "numerical_expressions_changed": false
+    },
+    {
+      "original_file": "genco/normalization.py",
+      "original_sha256": "e58e2c1b20ddffc815e3505ae1f1b101b964e0032e7418acba6e1de62cfe9506",
+      "distributed_file": "src/circuitflow/genco/normalization.py",
+      "distributed_sha256": "1ac4dafc038714d0d35e55b7cb1265d568287c9427fdbabab32eafd7372e9023",
+      "numerical_expressions_changed": false
+    },
+    {
+      "original_file": "genco/runtime.py",
+      "original_sha256": "6df8b58a67e2689b8255e420fba01e6311239afb34c41265998f2f57bf2bb9e5",
+      "distributed_file": "src/circuitflow/genco/runtime.py",
+      "distributed_sha256": "42e2327a2169d75ee162fee1db71c1375f5870c256481a0786cbd856cd53da73",
+      "numerical_expressions_changed": false
+    },
+    {
+      "original_file": "genco/flat_start.py",
+      "original_sha256": "d822b80b26f0b92c48fde9d5010cde39fdf07d8b18427b0b566993bad19cf550",
+      "distributed_file": "src/circuitflow/genco/flat_start.py",
+      "distributed_sha256": "5a1945752f6bb28cf4dc5b5bb4f1a94ed1f62c067ae3a511d2f36b746cf70311",
+      "numerical_expressions_changed": false
+    },
+    {
+      "original_file": "genco/flow_attention.py",
+      "original_sha256": "993c71c0d34eff2d0394af2497a08a5b343b9f8d25b90acd090d82c297c8bbbc",
+      "distributed_file": "src/circuitflow/genco/flow_attention.py",
+      "distributed_sha256": "6abcc34b671297ce8017b8c2592fc45f381f632753820f347598ad2ed7edcaa8",
+      "numerical_expressions_changed": false
+    }
+  ],
+  "no_manuscripts_private_data_credentials_or_research_logs": true,
+  "model_import_path_port_only": true,
+  "port_scope": "Only the listed model modules are source-preserving namespace ports; data, training and CLI orchestration are new standalone code.",
+  "benchmark_parser": {
+    "source_repository": "https://github.com/MOSSLab-MIT/pfdelta",
+    "source_file": "core/datasets/pfdelta_dataset.py",
+    "original_sha256": "0880fc30b5e9e4c0fbb0b03fb51ae3b0ff37ed95f847dd4968d747f3aee13bf3",
+    "distributed_file": "src/circuitflow/_benchmark_source.py",
+    "distributed_sha256": "470de73ac2c139c497e36cf14bffe668661895bf8c399d9de7e18250924d5675",
+    "expressions_unchanged": false,
+    "parsing_and_split_expressions_unchanged": true,
+    "changes": [
+      "remove registry import/decorator",
+      "standalone class name",
+      "optional save_subsplits flag suppresses redundant per-topology persistence without changing graph construction, selection or order"
+    ],
+    "affiliation_or_fork": false
+  }
+}

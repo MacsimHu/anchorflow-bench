@@ -18,3 +18,7 @@ predictions/
 *.gz
 *.log
 campaign.json
+.pytest_cache/
+build/
+*.egg-info/
+*.whl

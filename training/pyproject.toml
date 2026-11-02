@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "circuitflow"
+version = "0.1.0.dev1"
+description = "Two-scale physical-state graph models and reproducible AC power-flow experiments"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = [
+  "numpy>=1.26,<2",
+  "torch>=2.1,<2.2",
+  "torch-geometric==2.6.1",
+  "filelock>=3",
+  "psutil>=5.9",
+  "huggingface-hub>=0.28,<1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+circuitflow = "circuitflow.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["circuitflow*"]
+
+[tool.setuptools]
+license-files = ["LICENSE", "licenses/*.txt"]
+
+[tool.setuptools.package-data]
+circuitflow = ["_vendor/genco/**/*", "_vendor/genco/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

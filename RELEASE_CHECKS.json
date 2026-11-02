@@ -1,0 +1,29 @@
+{
+  "schema": "anchorflow-company-release-checks-v1",
+  "exported_qualified_source_files_unchanged": 58,
+  "standalone_commit": "7becaa5c04b6a964e8d3eb12764208242da00686",
+  "new_and_original_regression_tests_passed": 32,
+  "additional_unittest_subtests": 6,
+  "focused_tests_include": [
+    "model API and inference label isolation",
+    "Adam scheduler RNG sampler and partial VAL restoration",
+    "strict company job/source protocol and legacy job restrictions",
+    "canonical AC residual against independent complex Ybus oracle",
+    "unit-weight control finite backward path",
+    "incomplete endpoint rejected before TEST loading",
+    "aggregate identities counts finite values tail/pass coherence and no overwrite"
+  ],
+  "wheel_build_passed": true,
+  "wheel_package_sources_and_licenses_verified": true,
+  "wheel_sha256": "096abaf8f276e99d40466953bbec3fb17f584021c780f2159bafe3cc92db354b",
+  "local_validation_backend": "Windows CPU, Python3.10, torch2.1.2+cu121, numpy1.26.4, PyG2.6.1",
+  "company_A100_runtime_qualified": false,
+  "new_benchmark_training_runs": 0,
+  "new_benchmark_TEST_calls": 0,
+  "implemented_coordinate_specifications": 100,
+  "broader_proposal_coordinates": 386,
+  "unsupported_proposal_coordinates": 286,
+  "portable_native_CANOS_and_FlowCAN_included": false,
+  "all_scientific_experiments_complete": false,
+  "SOTA_established": false
+}

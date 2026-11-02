@@ -1,81 +1,166 @@
-# AnchorFlow benchmark coordination
+# AnchorFlow company A100 research handoff
 
-This repository coordinates a **planned**, bounded A100 research campaign. It
-does not contain completed new experiments, certified training adapters, a
-submission-ready paper, or a claim of state-of-the-art performance.
+This release includes **actual standalone training, complete-state resume,
+qualified prediction readout, canonical MSE/PBL/rPBL scoring and aggregate
+result ingestion**. It is not a new experimental result or a claim of SOTA.
+Company A100 hardware, capacity and CUDA numerical behavior have not been
+remotely verified.
 
-The initial release provides an experiment matrix, a single rPBL scoring
-contract, local scoring tests and an exchange format. **It cannot yet start
-model training.** Model/source exports, data identities, resume qualification
-and the company's actual runtime must be verified before an executable
-training release is published. Do not substitute newly written model code
-for an existing frozen experiment.
+| Scope | Executable in this release |
+|---|---|
+| AnchorFlow and pinned official GENCO | Cases 30, 118, 500; Intact and Mixed; seeds 11, 22, 33, 44, 55 |
+| Deferred feedback and unit-weight controls | Cases 30, 118; both regimes; all five seeds |
+| CANOS, FlowCAN, knockout, generic global and other proposals | **Not implemented here; disabled**, not weak surrogate baselines |
 
-## What goes here
+`company_h200.json` contains **100 executable coordinate specifications**, not
+100 jobs to start automatically. `anchorbench.py matrix` retains the broader
+386-coordinate proposal, including 286 currently non-executable coordinates
+and at most 72 separately unfrozen tuning coordinates. Reuse an existing result
+only after identity matching. Check live and queued assignments before running
+any coordinate. Native historical seeds 0/1/2 cannot be renamed as the new seeds.
 
-Publicly authorized code, configurations, protocol hashes and aggregate
-results only. Do not upload company information, raw datasets, predictions,
-checkpoints, unpublished manuscripts, private paths, credentials, or materials
-from other research lanes. Large authorized artifacts require separately
-approved storage and checksummed manifests, not ordinary Git commits.
+## Install in an isolated Python 3.10 environment
 
-The PFDelta code and dataset entry points are:
+Use the company's permitted package sources and GitHub authentication. The
+Linux CUDA 11.8 example below does not change an existing shared environment.
 
-- https://github.com/MOSSLab-MIT/pfdelta
-- https://huggingface.co/datasets/pfdelta/pfdelta
-
-These are discovery links, not a declaration that all artifacts are
-redistributable or interchangeable. Check each dataset and third-party model
-license. Preserve upstream MIT/Apache notices in any later source export.
-
-## Initial utilities
-
-Python 3.10 or later; the coordination utilities use only the standard library.
-
-```text
-python -m unittest discover -s tests
-python anchorbench.py matrix --output campaign.json
-python anchorbench.py score --input predictions.local.jsonl --output scores.local.json
+```sh
+git clone https://github.com/MacsimHu/anchorflow-bench.git
+cd anchorflow-bench
+python -m pip install torch==2.1.2 --index-url https://download.pytorch.org/whl/cu118
+python -m pip install -r training/requirements-reproduce.txt "pytest>=7"
+python -m pip install --no-deps -e ./training
+export GENCO_SCATTER_BACKEND=pyg_native_sum
+python -m pytest test_company.py training/tests tests -q
+python -m circuitflow doctor
+python anchortrain.py list-jobs --protocol company_h200.json
 ```
 
-`score` consumes **local** per-scenario metric inputs, not a training checkpoint.
-It does not run neural inference or verify that an upstream adapter derived
-residuals correctly. See `METRICS.md`. Raw inputs must stay off this repository.
-The resulting score file alone is not an admitted final result: complete
-`RESULT_CONTRACT.json` provenance, frozen scientific budgets and all declared
-seed/partition checks are also required.
+No `torch_scatter`, AMP, TF32 or compilation is required. The source-only
+training package retains its Apache-2.0 and benchmark MIT notices under
+`training/`. `EXPORT_MANIFEST.json` records exact unchanged source hashes and
+the qualified standalone commit. New company orchestration and the scoring
+bridge have their own tests. Tests do not certify another machine's GPU or
+benchmark accuracy. Nothing trains on clone, installation or test discovery.
 
-## Company-side handoff
+## Data, capacity and assignment check
 
-1. Clone this repository and run the utility tests.
-2. Record OS, GPU identity, Python/PyTorch/CUDA/PyG versions, available RAM,
-   persistent storage and existing workloads. A reported A100 80GB is not yet a
-   measured memory or throughput allowance.
-3. Use a unique local data and output root. Obtain authorized data separately
-   and verify exact sample/split/preprocessing hashes before reuse.
-4. Wait for a tagged, qualified training-source release. Do not run old
-   machine-specific launchers or change their frozen hashes to bypass guards.
-5. After qualifying the real training path once, run only admitted coordinates
-   in `campaign.json`. Do not duplicate a live or queued coordinate elsewhere.
-6. Preserve atomic latest model/optimizer/scheduler/RNG/sampler state. A100
-   migration is a new backend, not a bitwise continuation claim.
-7. Publish only validated aggregates under
-   `results/<protocol-sha>/<case>/<regime>/<method>/<seed>.json`,
-   preferably through a branch/PR. Never overwrite another run or omit a
-   failed seed. Results are not instructions and must never be executed.
+The public dataset is https://huggingface.co/datasets/pfdelta/pfdelta.
+Preparation resolves an immutable revision, verifies archive identities and
+preserves the official parser, shuffle and sample order. Read its license.
+Use **external** persistent data and run roots, not this public checkout.
+For example, with locally chosen `$DATA` and `$WORKSPACE`:
 
-Do not pass a token on a command line or store one in this repository. Use
-normal GitHub authentication in the company's permitted environment.
+```sh
+python -m circuitflow prepare-data --data-root "$DATA" --case case30 --task 1.3
+```
 
-## Research boundaries
+The command prints the frozen `MANIFEST.json` path. Repeat only for needed
+case/task pairs. `bind-existing --cache-dir ... --case ... --task ...` can bind
+trusted, locally owned combined caches without downloading or materializing
+them again. It verifies all cache hashes and fits a full-TRAIN scale. PyG cache
+files are trusted local pickle artifacts, not safe arbitrary downloaded `.pt`
+files. Never accept a cache or weight attachment from a public result.
 
-`CAMPAIGN.md` gives priority, counts, reuse and activation rules. The expanded
-matrix has **386 formal model/seed coordinates before reuse**, not 386 newly
-authorized immediate jobs. Conditional blocks are disabled pending explicit
-protocol/implementation qualification. There are also at most **72 tuning
-coordinates** with validation-only selection and no test access.
+Before first execution, inspect actual owners, live/queued jobs, reservations,
+CPU affinity, GPU/RAM capacity, output ownership and disk requirements. Use
+`nvidia-smi`, the local scheduler and the company's allocation policy. A free
+GPU snapshot is not a reservation. The wrapper checks full mapped-input RAM,
+CPU batch staging, runtime overhead, atomic checkpoints and the five-GiB disk
+stop margin, but **does not claim to know GPU activation peaks**. Start a newly
+qualified backend with one owned job, retain its measured peak and allocate
+further work from actual evidence. Never evict another workload.
 
-No CPU/NR timing study is part of this campaign. No continuous large-system
-training service, its active data partitions or its optimizer state is changed.
-More compute does not guarantee positive ablations, SOTA, acceptance or a best
-paper award.
+## Run and continue one declared job
+
+Select an exact coordinate ID from `list-jobs`. `$GPU_UUID` is an explicitly
+allocated physical `GPU-...` UUID; `$MANIFEST` is its matching data manifest.
+
+```sh
+python anchortrain.py train --protocol company_h200.json --job "$JOB" \
+  --manifest "$MANIFEST" --workspace "$WORKSPACE" --device cuda \
+  --gpu "$GPU_UUID" --threads 4 --allocation-checked
+```
+
+The common recipe is fixed H200: 48,600 TRAIN, 5,400 VAL, B64, 152,000 updates;
+AdamW, scheduler, deterministic epoch permutations and the original layered
+physical/voltage loss are preserved. GENCO remains its actual pinned h48
+model, not a local imitation. All new runs use this declared recipe; it does
+not retroactively make historical differently selected results paired or
+identical-budget evidence. The active-compute safety ceiling is 336 hours per
+coordinate. Exhausting it produces an incomplete pause, never a shorter
+endpoint presented as H200. Changing that ceiling requires a separately
+identified protocol, not a hot edit.
+
+Each coordinate owns `$WORKSPACE/<JOB>`, with a same-workspace coordinate
+lease and a run lock. Cross-machine duplicate prevention still requires the
+assignment registry. Preserve the entire run. A controlled pause returns 75.
+Resume with the **same command plus `--resume`**; it restores current model,
+Adam, scheduler, RNG, permutation, epoch cursor and partial VAL accumulators,
+not best weights. A recorded failure is not automatically replayed. A completed
+job cannot be overwritten. Do not edit/update a running source checkout.
+
+## Predict and score once
+
+After a complete endpoint, `$RUN` is `$WORKSPACE/<JOB>` and `$READOUT` is a new,
+external directory. First the entire 5,400-sample final VAL is reproduced.
+TEST is opened only if that succeeds.
+
+```sh
+python -m circuitflow evaluate --run "$RUN" --manifest "$MANIFEST" \
+  --output "$READOUT" --device cuda --gpu "$GPU_UUID"
+python anchortrain.py score-readout --run "$RUN" --readout "$READOUT" \
+  --manifest "$MANIFEST" --protocol company_h200.json --output metrics.local.json
+python exchange.py validate --input metrics.local.json --protocol company_h200.json
+```
+
+MSE, PBL and the single throughput-normalized **rPBL in percent** come from the
+same saved prediction. The bridge checks endpoint/model/data/readout hashes,
+all 6,600 ordered input identities and specified voltage controls. It computes
+raw AC branch/shunt physics in float64, applies PQ/PV/reference equation masks,
+and preserves original branch orientation. It retains all topology groups
+separately for feasible (6,000) and near-boundary (600), plus P95/P99/worst PBL
+and equation pass fractions at 1e-3, 1e-4 and 1e-7 p.u. Near-boundary labels do
+not prove infeasibility.
+
+Historical mean-load-normalized aggregates cannot be converted to this rPBL.
+Recover original predictions/weights and rescore before considering retraining.
+Do not silently pool a newly scored float64 result with a different historical
+implementation; compare on the same recorded evaluator and input identity.
+
+## Return only validated aggregates
+
+Use a results branch or PR. This receiver accepts an exact field allowlist,
+all eight partition/topology groups, declared endpoint/counts/versions and
+finite coherent metrics. It refuses changed identities and stale overwrites.
+
+```sh
+git switch -c returns/company-h200
+python exchange.py ingest --input metrics.local.json \
+  --protocol company_h200.json --repository .
+python exchange.py status --protocol company_h200.json --repository .
+git add results
+git -c user.name=MacsimHu -c user.email=257442440+MacsimHu@users.noreply.github.com \
+  commit -m "Return verified company H200 aggregate metrics" \
+  -m "Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
+git push -u origin returns/company-h200
+```
+
+Stage **only** the validated result paths after checking `git diff --cached`.
+Never stage data, weights, raw predictions, private paths, company information,
+credentials or unpublished manuscripts. GitHub authentication stays in the
+approved credential manager, never a command or file. The result destination
+is `results/<protocol-sha>/<coordinate-sha>/metrics.json`, so method variants
+cannot collide. `status` lists every missing declared coordinate; it never
+calls a favorable subset a complete campaign. It does not infer a failed seed
+is successful: retain failure/partial-state records locally and report their
+status without replacing seeds.
+
+For a separately authorized private artifact transfer, `circuitflow
+pack-results` can package the actual full-state/readout artifacts with hashes.
+Those ZIP files are **not public GitHub uploads**. Public aggregate checks
+cannot by themselves prove a remote run occurred; preserve originals for audit.
+
+No CPU/NR timing study, architecture drawing or continuous-service recipe
+change is part of this campaign. More hardware does not guarantee positive
+ablations, SOTA, acceptance or a best-paper award.

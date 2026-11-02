@@ -1,0 +1,223 @@
+{
+    "source_repository":  "https://github.com/gridfm/gridfm-graphkit",
+    "source_commit":  "0912c734b0912202e22aad79dde996ae0f1190a0",
+    "retrieved_utc":  "2026-09-21",
+    "license":  "Apache-2.0",
+    "upstream_root_NOTICE":  "absent at pinned root inventory",
+    "license_files":  [
+                          "LICENSE",
+                          "pristine/LICENSE"
+                      ],
+    "patches":  [
+                    "Five lightweight initializers replace eager package imports",
+                    "param_handler: retain exact get_physics_decoder lines 155-164 plus required imports",
+                    "models/gnn_heterogeneous_gns.py, models/utils.py, training/loss.py: only scatter import replacement and adaptation notice",
+                    "Local _scatter.py defaults to installed torch_scatter; native PyG sum fallback on ImportError/OSError or explicit opt-in",
+                    "Adapted training/loss.py: final blank-line normalization only, no computational change"
+                ],
+    "unchanged_computational_files":  [
+                                          "datasets/globals.py",
+                                          "datasets/masking.py",
+                                          "io/registries.py"
+                                      ],
+    "dependency_changes":  [
+
+                           ],
+    "files":  [
+                  {
+                      "path":  "LICENSE",
+                      "sha256":  "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+                      "bytes":  11357,
+                      "status":  "license_or_local_notice"
+                  },
+                  {
+                      "path":  "pristine/examples/config/HGNS_PF_datakit_case30.yaml",
+                      "sha256":  "cb622e3cadd6569503ee434ed6f31a1eb49ede32c6a05a5ccb86c074931660e0",
+                      "bytes":  818,
+                      "source_url":  "https://raw.githubusercontent.com/gridfm/gridfm-graphkit/0912c734b0912202e22aad79dde996ae0f1190a0/examples/config/HGNS_PF_datakit_case30.yaml",
+                      "status":  "pristine"
+                  },
+                  {
+                      "path":  "pristine/gridfm_graphkit/__init__.py",
+                      "sha256":  "0b1f1cf9fa9da7f0653b14f6bbac19d5d79481d914450fe35ba2a01d6648fe9d",
+                      "bytes":  211,
+                      "source_url":  "https://raw.githubusercontent.com/gridfm/gridfm-graphkit/0912c734b0912202e22aad79dde996ae0f1190a0/gridfm_graphkit/__init__.py",
+                      "status":  "pristine"
+                  },
+                  {
+                      "path":  "pristine/gridfm_graphkit/datasets/globals.py",
+                      "sha256":  "04795c01e2e3422b3297c193864d70daacd1232c83caa884e158ca78721b0080",
+                      "bytes":  1668,
+                      "source_url":  "https://raw.githubusercontent.com/gridfm/gridfm-graphkit/0912c734b0912202e22aad79dde996ae0f1190a0/gridfm_graphkit/datasets/globals.py",
+                      "status":  "pristine"
+                  },
+                  {
+                      "path":  "pristine/gridfm_graphkit/datasets/hetero_preprocess.py",
+                      "sha256":  "5698cb1e86af8607a5d5918948dff45cf72be4def4c36ff60f3a278e98467562",
+                      "bytes":  11614,
+                      "source_url":  "https://raw.githubusercontent.com/gridfm/gridfm-graphkit/0912c734b0912202e22aad79dde996ae0f1190a0/gridfm_graphkit/datasets/hetero_preprocess.py",
+                      "status":  "pristine"
+                  },
+                  {
+                      "path":  "pristine/gridfm_graphkit/datasets/masking.py",
+                      "sha256":  "1c0154f46619cc858ae36fce98537239e6ba6c635a9ae5b56b21c46ac624685b",
+                      "bytes":  10427,
+                      "source_url":  "https://raw.githubusercontent.com/gridfm/gridfm-graphkit/0912c734b0912202e22aad79dde996ae0f1190a0/gridfm_graphkit/datasets/masking.py",
+                      "status":  "pristine"
+                  },
+                  {
+                      "path":  "pristine/gridfm_graphkit/datasets/normalizers.py",
+                      "sha256":  "ddef83279311f3f5199ccae31008d683c90ded0d6011ef87fff1a1fba3baccfc",
+                      "bytes":  25849,
+                      "source_url":  "https://raw.githubusercontent.com/gridfm/gridfm-graphkit/0912c734b0912202e22aad79dde996ae0f1190a0/gridfm_graphkit/datasets/normalizers.py",
+                      "status":  "pristine"
+                  },
+                  {
+                      "path":  "pristine/gridfm_graphkit/datasets/transforms.py",
+                      "sha256":  "0ce808ee023db96010c680d6e258d271e6eff5d1a58c148edb9a11f9e01b0517",
+                      "bytes":  4119,
+                      "source_url":  "https://raw.githubusercontent.com/gridfm/gridfm-graphkit/0912c734b0912202e22aad79dde996ae0f1190a0/gridfm_graphkit/datasets/transforms.py",
+                      "status":  "pristine"
+                  },
+                  {
+                      "path":  "pristine/gridfm_graphkit/io/param_handler.py",
+                      "sha256":  "5f51c905fa4edb75b1e98c2d4b90de0f78fcaecd51ea33c16be0b0aedc4f07c9",
+                      "bytes":  4563,
+                      "source_url":  "https://raw.githubusercontent.com/gridfm/gridfm-graphkit/0912c734b0912202e22aad79dde996ae0f1190a0/gridfm_graphkit/io/param_handler.py",
+                      "status":  "pristine"
+                  },
+                  {
+                      "path":  "pristine/gridfm_graphkit/io/registries.py",
+                      "sha256":  "cc4a1766f30d2926bb87444669b08160089cbcfda3bffcdd59f6f5cebb689ce7",
+                      "bytes":  1448,
+                      "source_url":  "https://raw.githubusercontent.com/gridfm/gridfm-graphkit/0912c734b0912202e22aad79dde996ae0f1190a0/gridfm_graphkit/io/registries.py",
+                      "status":  "pristine"
+                  },
+                  {
+                      "path":  "pristine/gridfm_graphkit/models/gnn_heterogeneous_gns.py",
+                      "sha256":  "2818209297b3ef2d73c03714dc1f90c42fe12f01f99e472173341b73ed65aa99",
+                      "bytes":  11825,
+                      "source_url":  "https://raw.githubusercontent.com/gridfm/gridfm-graphkit/0912c734b0912202e22aad79dde996ae0f1190a0/gridfm_graphkit/models/gnn_heterogeneous_gns.py",
+                      "status":  "pristine"
+                  },
+                  {
+                      "path":  "pristine/gridfm_graphkit/models/utils.py",
+                      "sha256":  "2a4f2374106df7396d10e1ee2bc31505e96948780a55e5f3c595c5f95b85ef01",
+                      "bytes":  6772,
+                      "source_url":  "https://raw.githubusercontent.com/gridfm/gridfm-graphkit/0912c734b0912202e22aad79dde996ae0f1190a0/gridfm_graphkit/models/utils.py",
+                      "status":  "pristine"
+                  },
+                  {
+                      "path":  "pristine/gridfm_graphkit/training/loss.py",
+                      "sha256":  "24ec5d9f4edaacfcdd8ee8715a5b16369aaa152e1d88128233c28c50af145665",
+                      "bytes":  11285,
+                      "source_url":  "https://raw.githubusercontent.com/gridfm/gridfm-graphkit/0912c734b0912202e22aad79dde996ae0f1190a0/gridfm_graphkit/training/loss.py",
+                      "status":  "pristine"
+                  },
+                  {
+                      "path":  "pristine/LICENSE",
+                      "sha256":  "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+                      "bytes":  11357,
+                      "source_url":  "https://raw.githubusercontent.com/gridfm/gridfm-graphkit/0912c734b0912202e22aad79dde996ae0f1190a0/LICENSE",
+                      "status":  "pristine"
+                  },
+                  {
+                      "path":  "pristine/README.md",
+                      "sha256":  "24cf30f35932b37a651322b290f94405e0a204237f3893d695731bdb60cf0318",
+                      "bytes":  15017,
+                      "source_url":  "https://raw.githubusercontent.com/gridfm/gridfm-graphkit/0912c734b0912202e22aad79dde996ae0f1190a0/README.md",
+                      "status":  "pristine"
+                  },
+                  {
+                      "path":  "pristine/winning_recipe_case2k/HGNS_PF_datakit_case2000_canonical_best.yaml",
+                      "sha256":  "b650324a856516033f9515752c6175403e8c95d1aae1d5b7f1e0fbd59cdf0c73",
+                      "bytes":  1617,
+                      "source_url":  "https://raw.githubusercontent.com/gridfm/gridfm-graphkit/0912c734b0912202e22aad79dde996ae0f1190a0/winning_recipe_case2k/HGNS_PF_datakit_case2000_canonical_best.yaml",
+                      "status":  "pristine"
+                  },
+                  {
+                      "path":  "README.md",
+                      "sha256":  "6590d26958153de1af0dea1a6405f5f4f6f2176a0f0c4c4b6f90739427f483e2",
+                      "bytes":  2552,
+                      "status":  "license_or_local_notice"
+                  },
+                  {
+                      "path":  "runtime/gridfm_graphkit/__init__.py",
+                      "sha256":  "919674d20a17c622d4379137c612c3e1d6329cd2d29892754a1780567e949317",
+                      "bytes":  77,
+                      "status":  "adapted_runtime"
+                  },
+                  {
+                      "path":  "runtime/gridfm_graphkit/_scatter.py",
+                      "sha256":  "4ee71d66252c7fc2363ca9757a8167aee5b7bded7a2d33bd238e676417ff239c",
+                      "bytes":  1430,
+                      "status":  "adapted_runtime"
+                  },
+                  {
+                      "path":  "runtime/gridfm_graphkit/datasets/__init__.py",
+                      "sha256":  "04df7d65d4020ac2e3635b28ab2dc998f82410ab141e337423152b30a67cb651",
+                      "bytes":  73,
+                      "status":  "adapted_runtime"
+                  },
+                  {
+                      "path":  "runtime/gridfm_graphkit/datasets/globals.py",
+                      "sha256":  "04795c01e2e3422b3297c193864d70daacd1232c83caa884e158ca78721b0080",
+                      "bytes":  1668,
+                      "status":  "adapted_runtime"
+                  },
+                  {
+                      "path":  "runtime/gridfm_graphkit/datasets/masking.py",
+                      "sha256":  "1c0154f46619cc858ae36fce98537239e6ba6c635a9ae5b56b21c46ac624685b",
+                      "bytes":  10427,
+                      "status":  "adapted_runtime"
+                  },
+                  {
+                      "path":  "runtime/gridfm_graphkit/io/__init__.py",
+                      "sha256":  "3ddfbeb14aa19c2ef46d4c51616b025ff7531e1d123361739fd764490b9581e7",
+                      "bytes":  75,
+                      "status":  "adapted_runtime"
+                  },
+                  {
+                      "path":  "runtime/gridfm_graphkit/io/param_handler.py",
+                      "sha256":  "9424bf69ee3a419818ef8501bc634fe15a87e7427f4729b6795921d7e4949274",
+                      "bytes":  599,
+                      "status":  "adapted_runtime"
+                  },
+                  {
+                      "path":  "runtime/gridfm_graphkit/io/registries.py",
+                      "sha256":  "cc4a1766f30d2926bb87444669b08160089cbcfda3bffcdd59f6f5cebb689ce7",
+                      "bytes":  1448,
+                      "status":  "adapted_runtime"
+                  },
+                  {
+                      "path":  "runtime/gridfm_graphkit/models/__init__.py",
+                      "sha256":  "16d9651242320b7b5fb766da6fc4a4e2162fdbc0e944d396f0dccd252db8778a",
+                      "bytes":  72,
+                      "status":  "adapted_runtime"
+                  },
+                  {
+                      "path":  "runtime/gridfm_graphkit/models/gnn_heterogeneous_gns.py",
+                      "sha256":  "dca6377446e057d6760cb1ae51b1a204c66a2135ab1cfcf030430840a4d7c3af",
+                      "bytes":  11919,
+                      "status":  "adapted_runtime"
+                  },
+                  {
+                      "path":  "runtime/gridfm_graphkit/models/utils.py",
+                      "sha256":  "4ee130935312d51b87b180023eab7e6f9cfb5e2432d2a62d102bc6d88fc3a61a",
+                      "bytes":  6866,
+                      "status":  "adapted_runtime"
+                  },
+                  {
+                      "path":  "runtime/gridfm_graphkit/training/__init__.py",
+                      "sha256":  "8591a768d16556b70e30001c25d2375db92207c25e8d23dd0b77aaefd4cf17e2",
+                      "bytes":  82,
+                      "status":  "adapted_runtime"
+                  },
+                  {
+                      "path":  "runtime/gridfm_graphkit/training/loss.py",
+                      "sha256":  "0de64a22078d385db24c956e2ba2e6b3470acab7a30f559c0c4a1f86dea7fd44",
+                      "bytes":  11378,
+                      "status":  "adapted_runtime"
+                  }
+              ]
+}
