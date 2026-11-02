@@ -1,0 +1,42 @@
+{
+  "schema": "anchorflow-bounded-validation-only-tuning-v1",
+  "status": "configuration grid specified, execution adapter not yet enabled",
+  "seed": 101,
+  "independent_from_formal_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "methods": [
+    "AnchorFlow",
+    "GENCO",
+    "CANOS",
+    "FlowCAN"
+  ],
+  "cases": [
+    30,
+    118,
+    500
+  ],
+  "regimes": [
+    "Intact",
+    "Mixed"
+  ],
+  "learning_rates": [
+    0.00025,
+    0.0005,
+    0.001
+  ],
+  "configurations_per_cell": 3,
+  "maximum_coordinates": 72,
+  "all_other_native_model_optimizer_loss_schedule_parameters_fixed": true,
+  "selection": "Complete per-scenario VAL completed-output MSE, then VAL PBL as a deterministic tie-breaker.",
+  "TEST_access_for_selection": false,
+  "early_stopping": false,
+  "endpoint": "fixed H200",
+  "formal_native_recipe_results_not_relabelled_as_tuned": true,
+  "retain_all_tuning_costs_and_failures": true,
+  "activate_only_after_first_useful_native_recipe_wave": true
+}

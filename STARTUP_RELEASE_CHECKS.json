@@ -1,0 +1,17 @@
+{
+  "schema": "anchorflow-company-startup-release-v1",
+  "parent": "3646136a60baa9d349a08b7cd06a5a745743d19e",
+  "startup_tests_passed": 6,
+  "model_tests_repeated": false,
+  "prior_model_resume_physics_tests": 32,
+  "scientific_source_and_protocol_unchanged": true,
+  "ready_specifications": 100,
+  "blocked_proposals": 286,
+  "finite_first_wave": "case30 Mixed seed11 Full, Deferred, Unit and GENCO",
+  "default_driver_mode": "dry plan, no launch",
+  "explicit_driver_execute": "train, fixed-endpoint readout, canonical score, aggregate ingestion",
+  "native_baseline_reference_files_supplied": true,
+  "native_adapters_complete": false,
+  "company_A100_execution_verified": false,
+  "new_scientific_training_or_TEST": 0
+}

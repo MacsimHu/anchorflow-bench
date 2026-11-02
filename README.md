@@ -1,5 +1,10 @@
 # AnchorFlow company A100 research handoff
 
+**Company runner: open [COMPANY_START_HERE.md](COMPANY_START_HERE.md) first.**
+`COMPANY_QUEUE.json` gives exact prioritized ready job IDs and every blocked
+proposal's activation requirements. `preflight.py` is a lightweight setup
+check, not another experimental campaign.
+
 This release includes **actual standalone training, complete-state resume,
 qualified prediction readout, canonical MSE/PBL/rPBL scoring and aggregate
 result ingestion**. It is not a new experimental result or a claim of SOTA.

@@ -1,0 +1,41 @@
+{
+  "schema": "anchorflow-native-baseline-reference-v1",
+  "source_repository": "https://github.com/MOSSLab-MIT/pfdelta",
+  "source_kind": "Current local research snapshot, identified by exact file bytes; not an assertion that upstream HEAD matches.",
+  "original_files": {
+    "core/models/canos_pf.py": "3d55c623a3e615221c7a41061262444e340fcebdf766551b2566e34102b4d814",
+    "core/models/canos_utils.py": "b5877b2ca4b565acd87e4a6f018f15fe08f303acb72f2ec5fdf5c8919cb73a20",
+    "core/models/flowcan.py": "7421a460ba99e9e95d32f582253e78d41f457591c36d4bcd558f34978b8f08a6",
+    "core/utils/registry.py": "50cb1b5c1753f567bee418425015da9e49d7c18f51cf692c7340e31639868b71",
+    "LICENSE": "cba9ab8c2c002c278fa9157f049e27f8e3f1b23101cd0462674da00613bcf013"
+  },
+  "loss_origin_sha256": "2601678ca3d4a700f7f04e96999f8753c894747524d8da041b9946b7176977da",
+  "extracted_classes": [
+    "CANOS_PF_MSE",
+    "constraint_violations_loss_pf"
+  ],
+  "class_bodies_changed": false,
+  "license": "MIT, retained in LICENSE",
+  "training_adapter_implemented": false,
+  "native_CANOS_reference": {
+    "hidden_dim": 128,
+    "k_steps": 20,
+    "include_sent_messages": true,
+    "optimizer": "Adam",
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0,
+    "warmup_epochs": 5,
+    "warmup_start_factor": 0.01,
+    "decay_step_epochs": 4,
+    "decay_gamma": 0.9,
+    "objective": "CANOS_PF_MSE + 0.1 * constraint_violations_loss_pf",
+    "raw_pu_inputs_no_optional_normalization": true
+  },
+  "native_FlowCAN_model_reference": {
+    "class_name": "FlowCAN",
+    "n_heads": 4,
+    "different_architecture_not_an_AnchorFlow_alias": true
+  },
+  "essential_adapter_requirement": "Native PV reactive-power output is learned. Preserve all completed outputs or their per-scenario group MSE from the same inference. Voltage-only reconstruction must not replace the learned PV-Q output.",
+  "original_training_and_readout_identity_must_be_frozen_before_launch": true
+}
