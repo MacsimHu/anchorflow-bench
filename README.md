@@ -5,6 +5,10 @@
 proposal's activation requirements. `preflight.py` is a lightweight setup
 check, not another experimental campaign.
 
+See [REVIEW_EXPERIMENTS.md](REVIEW_EXPERIMENTS.md) for the review-to-experiment
+map and paper result slots. `paper_export.py` exports only complete declared
+five-seed cohorts for direct author-table ingestion, never partial-seed means.
+
 This release includes **actual standalone training, complete-state resume,
 qualified prediction readout, canonical MSE/PBL/rPBL scoring and aggregate
 result ingestion**. It is not a new experimental result or a claim of SOTA.

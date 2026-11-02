@@ -5,6 +5,10 @@ Read `COMPANY_QUEUE.json` for exact job IDs. This file supersedes any instructio
 to wait for a future training-source release. Nothing here authorizes changing
 a live run or the separate continuous-training service.
 
+`REVIEW_EXPERIMENTS.md` maps each scientific concern to its experiment block and
+author result slot. `paper_export.py` turns validated complete five-seed cohorts
+into fillable author-table data, without exporting partial-seed means.
+
 ## 1. Put all large writes on the data volume
 
 Choose an existing **authorized writable directory** on the data volume as
