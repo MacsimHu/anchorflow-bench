@@ -1,5 +1,12 @@
 # Review-driven experiment and manuscript map, 2 November 2026
 
+**SUPERSEDED SCHEDULING.** The broad five-seed expansion below is not active.
+Current scope is original three-run main evidence, exact reuse before any
+training, case500 FlowCAN Task1.3 gap verification and Case30-only mechanisms.
+Read `CURRENT_TASKS.md` / `ACTIVE_SCOPE.json`. More resources do not justify
+repeating completed work. Old case118/500 ablations and sensitivity sweeps are
+not default tasks.
+
 This is the execution/evidence map, not a claim that the experiments have finished.
 Use `COMPANY_START_HERE.md` to start the implemented finite wave immediately.
 Do not wait for optional baselines or repeat completed historical work by default.

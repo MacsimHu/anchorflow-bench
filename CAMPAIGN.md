@@ -1,5 +1,10 @@
 # Bounded A100 campaign, proposal 2026-11-02
 
+**WITHDRAWN AS AN ACTIVE PLAN.** This is a preserved earlier broad proposal.
+The author corrected scope to existing three-run main comparisons, recovery
+first, only the genuine case500 FlowCAN Task1.3 gap, and Case30 mechanisms.
+Use `CURRENT_TASKS.md` / `ACTIVE_SCOPE.json`, not the matrix below, for work.
+
 ## Decision and primary evidence
 
 Determine whether harmonic voltage correction with immediate AC feedback

@@ -1,5 +1,10 @@
 # One checkout is the source handoff
 
+**Current work is `CURRENT_TASKS.md` / `ACTIVE_SCOPE.json`.** The previous
+five-seed waves and386-coordinate expansion are withdrawn, not waiting for
+more transferred data. Do not start their old four-job example. Reuse the
+original three-run main experiments and restrict mechanisms toCase30.
+
 Pull this repository once, including `training/` and `native_reference/`.
 No model source, license or dependency file is intentionally held back for a
 later transfer of the currently executable100-coordinate release.

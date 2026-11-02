@@ -1,0 +1,24 @@
+{
+  "schema": "anchorflow-reuse-first-three-run-scope-v1",
+  "supersedes": "The five-seed company waves, 386-coordinate expansion and 72-coordinate tuning proposal",
+  "main_table_declared_runs": 3,
+  "main_priority": "Reuse existing completed original three-run cohorts. Missing intake is not evidence that training must be repeated.",
+  "only_presumptive_main_training_gap": {
+    "case": "case500",
+    "method": "FlowCAN",
+    "task": "1.3",
+    "action": "Check existing completed and assigned original runs first; complete only genuinely missing declared runs, never duplicate them."
+  },
+  "ablation_cases": ["case30"],
+  "ablation_variants": ["Full reference reuse", "Deferred", "Unit weights", "Coarse knockout", "Mean-token global"],
+  "ablation_runs": "The original declared three seeds and matched parent/order/budget, not relabeled seeds or a new five-seed baseline.",
+  "new_training_coordinate_allowlist": [],
+  "old_five_seed_driver_execute_authorized": false,
+  "historical_company_protocol_is_execution_authority": false,
+  "default_118_or_500_ablations": false,
+  "default_factorial_depth_anchor_loss_or_extra_baseline_sweeps": false,
+  "repeat_completed_main_training": false,
+  "existing_jobs": "Preserve current full states and owners. Do not automatically stop, restart, overwrite or duplicate any running job.",
+  "evaluation_first": ["recover missing result packets", "canonical rPBL rescore", "existing-prediction tails and pass fractions"],
+  "new_experiment_activation": "Requires an exact verified gap and a bounded matching protocol. This scope does not activate the old company five-seed coordinates."
+}

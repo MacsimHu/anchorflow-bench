@@ -1,4 +1,6 @@
 {
+  "current_status": "withdrawn_as_active_queue; historical specifications only",
+  "current_work_authority": "ACTIVE_SCOPE.json and CURRENT_TASKS.md",
   "schema": "anchorflow-company-priority-queue-v1",
   "execution_protocol": "company_h200.json",
   "execution_protocol_sha256": "f59b81624e0e1f424e9ffc484866272cbd4456361b7a22aba6d4e725d6f65641",

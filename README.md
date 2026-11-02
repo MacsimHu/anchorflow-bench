@@ -1,5 +1,13 @@
 # AnchorFlow company A100 research handoff
 
+**CURRENT SCOPE CORRECTION: open [CURRENT_TASKS.md](CURRENT_TASKS.md).**
+The main table stays with the original **three runs**. Reuse completed work.
+The earlier five-seed/386-coordinate expansion is withdrawn as an active plan.
+Only verify the actual case500 FlowCAN Task1.3 gap and finish necessary Case30
+controls. `ACTIVE_SCOPE.json` governs scope; old train examples below are
+historical references, not launch instructions. The old finite-wave execute
+path is blocked before training. No new main baseline matrix is requested.
+
 **Company runner: open [COMPANY_START_HERE.md](COMPANY_START_HERE.md) first.**
 `COMPANY_QUEUE.json` gives exact prioritized ready job IDs and every blocked
 proposal's activation requirements. `preflight.py` is a lightweight setup

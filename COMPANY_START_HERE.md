@@ -1,6 +1,13 @@
 # Company runner: start here
 
-**Start the implemented jobs now. Do not wait for all optional research branches.**
+**SUPERSEDED STARTUP WAVES: read `CURRENT_TASKS.md` and `ACTIVE_SCOPE.json` first.**
+Do not execute the old four-job/five-seed wave below. Main comparisons reuse
+the original three-run cohorts; only the real case500 FlowCAN Task1.3 gap and
+necessary Case30 controls are in scope. Existing missing seed files must be
+recovered before considering any training. The examples below preserve the
+old environment/source interface, not the current experiment schedule.
+
+**Do not start a new main-comparison matrix.**
 Read `COMPANY_QUEUE.json` for exact job IDs. This file supersedes any instruction
 to wait for a future training-source release. Nothing here authorizes changing
 a live run or the separate continuous-training service.

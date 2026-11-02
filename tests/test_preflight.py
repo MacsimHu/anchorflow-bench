@@ -11,6 +11,14 @@ from anchortrain import ROOT
 
 
 class PreflightTests(unittest.TestCase):
+    def test_withdrawn_five_seed_wave_is_rejected_before_any_command(self):
+        with patch("run_company.sys.argv", [
+            "run_company.py", "--case", "case30", "--regime", "Mixed", "--execute"
+        ]), patch("run_company.command") as command:
+            with self.assertRaisesRegex(RuntimeError, "withdrawn"):
+                run_company.main()
+            command.assert_not_called()
+
     def test_existing_newer_torch_is_not_formal_environment(self):
         response = dict(python=[3, 10, 21],
                         packages={"torch": "2.6.0+cu124", "numpy": "1.26.4",

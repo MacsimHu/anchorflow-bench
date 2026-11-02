@@ -11,6 +11,16 @@ from anchortrain import ROOT, digest, read_protocol, selected_job
 from exchange import ingest, validate
 
 
+def authorize_current_scope():
+    scope = json.loads((ROOT / "ACTIVE_SCOPE.json").read_text(encoding="utf-8"))
+    if (scope.get("schema") != "anchorflow-reuse-first-three-run-scope-v1"
+            or scope.get("old_five_seed_driver_execute_authorized") is not True):
+        raise RuntimeError(
+            "The five-seed company waves are withdrawn. Reuse original three-run "
+            "results; check only the actual case500 FlowCAN Task1.3 gap and existing "
+            "Case30 controls. Read CURRENT_TASKS.md; do not bypass this with old train examples.")
+
+
 def select_wave(queue_path, protocol_path, case, regime, seeds):
     queue = json.loads(Path(queue_path).read_text(encoding="utf-8"))
     plan = read_protocol(protocol_path)
@@ -60,8 +70,12 @@ def main():
     parser.add_argument("--allocation-checked", action="store_true")
     parser.add_argument("--resume-existing", action="store_true")
     args = parser.parse_args()
+    if args.execute:
+        authorize_current_scope()
     jobs = select_wave(args.queue, args.protocol, args.case, args.regime, args.seeds)
-    print(json.dumps(dict(jobs=len(jobs), training_requested=args.execute,
+    print(json.dumps(dict(jobs=len(jobs), historical_specifications_only=True,
+                          current_scope="CURRENT_TASKS.md and ACTIVE_SCOPE.json",
+                          training_requested=args.execute,
                           coordinate_ids=[job["id"] for job in jobs]), indent=2), flush=True)
     if not args.execute:
         return 0
