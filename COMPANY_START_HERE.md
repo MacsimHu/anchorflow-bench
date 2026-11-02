@@ -1,5 +1,12 @@
 # Company runner: start here
 
+**Current executable assignment: read the first section of `CURRENT_TASKS.md`.**
+`CASE30_ALLOCATION.json` now resolves the six Mixed controls: Deferred0/1/2
+remain in the live laboratory queue; company runs only Unit0/1/2 through
+`case30_matched.py`, with the supplied original Full/DEV450 reference.
+Do not use the historical `anchortrain.py` full-VAL or seed11 examples below.
+Do not repeat setup when the pinned company environment and data already work.
+
 **SUPERSEDED STARTUP WAVES: read `CURRENT_TASKS.md` and `ACTIVE_SCOPE.json` first.**
 Do not execute the old four-job/five-seed wave below. Main comparisons reuse
 the original three-run cohorts; only the real case500 FlowCAN Task1.3 gap and

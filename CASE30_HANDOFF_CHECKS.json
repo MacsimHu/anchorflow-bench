@@ -1,0 +1,29 @@
+{
+  "schema": "anchorflow-case30-company-handoff-checks-v1",
+  "focused_tests": {
+    "passed": 6,
+    "covers": ["exact three company allocations and rejection of lab Deferred coordinates", "legacy five-seed execution remains blocked", "original first batch and 24-graph tail", "all three exact original initial tensor sets", "DEV450 scheduler weighting including its final two-graph batch"]
+  },
+  "Linux_original_data_setup": {
+    "complete": true,
+    "verified_unix": 1793638913.185408,
+    "torch": "2.1.2+cu118",
+    "TRAIN_graphs": 48600,
+    "DEV_graphs": 450,
+    "Bpu": 0.8784196972846985,
+    "initial_full_state_save_and_resume": true,
+    "RSS_bytes": 1118547968
+  },
+  "Windows_original_cache_integration": {
+    "complete": false,
+    "exit_code": -1073741819,
+    "meaning": "Native Windows cache integration aborted; not reported as passing. The actual Ubuntu target path was checked independently above."
+  },
+  "new_optimizer_updates": 0,
+  "new_NN_forwards": 0,
+  "TEST_calls": 0,
+  "GPU_initialized_by_setup_check": false,
+  "company_GPU_first_update": "Not yet observed; company must return its actual PID and first positive optimizer update.",
+  "unchanged_scientific_core": "Existing public model, loss, optimizer, scatter and training-step implementation are not edited; the new opt-in driver restores the original Full initialization and DEV450 protocol.",
+  "comparison_limit": "Original Full is CPU; the company control is CUDA. Matching tensors, data, schedule and update budget does not remove this backend difference."
+}

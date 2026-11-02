@@ -12,7 +12,14 @@
   "ablation_cases": ["case30"],
   "ablation_variants": ["Full reference reuse", "Deferred", "Unit weights", "Coarse knockout", "Mean-token global"],
   "ablation_runs": "The original declared three seeds and matched parent/order/budget, not relabeled seeds or a new five-seed baseline.",
-  "new_training_coordinate_allowlist": [],
+  "new_training_coordinate_allowlist": [
+    "case30-Mixed-Unit-seed0",
+    "case30-Mixed-Unit-seed1",
+    "case30-Mixed-Unit-seed2"
+  ],
+  "distributed_allocation": "CASE30_ALLOCATION.json",
+  "paired_control_execution_entrypoint": "case30_matched.py",
+  "original_full_matching_reference": "case30_reference/FULL_REFERENCE.json",
   "old_five_seed_driver_execute_authorized": false,
   "historical_company_protocol_is_execution_authority": false,
   "default_118_or_500_ablations": false,
