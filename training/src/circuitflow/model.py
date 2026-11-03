@@ -46,7 +46,7 @@ class ElectricalCoarseSpace:
 def electrical_coarse_space(edge_index, edge_attr, pv, ref, *, max_component_buses=128,
                             weight_mode="electrical"):
     """Input-only harmonic basis; unit weights provide a topology-only control."""
-    if weight_mode not in ("electrical", "unit"):
+    if weight_mode not in ("electrical", "unit", "mean_token"):
         raise ValueError("Unknown coarse-space weight mode")
     if (edge_index.dtype != torch.long or edge_index.ndim != 2
             or edge_index.shape[0] != 2 or edge_attr.ndim != 2
@@ -101,6 +101,18 @@ def electrical_coarse_space(edge_index, edge_attr, pv, ref, *, max_component_bus
         if selected.numel() != 1:
             raise ValueError("Each connected component requires exactly one REF bus")
         reference[g] = selected[0]
+    if weight_mode == "mean_token":
+        basis = torch.zeros((len(groups), width, width), device=device, dtype=dtype)
+        restriction = torch.zeros_like(basis)
+        anchor_graph = torch.arange(len(groups), device=device)
+        anchor_slot = slot[reference]
+        for g, buses in enumerate(groups):
+            basis[g, :len(buses), anchor_slot[g]] = 1
+            restriction[g, anchor_slot[g], :len(buses)] = 1 / len(buses)
+        edges = torch.stack((anchor_graph, anchor_graph))
+        return ElectricalCoarseSpace(
+            basis, restriction, graph, slot, anchor_graph, anchor_slot,
+            reference, edges, edge_attr.new_zeros((len(groups), 1)))
     anchors = torch.zeros_like(valid)
     anchors[graph, slot] = pv | ref
     senders, receivers = edge_index[:, active]
@@ -162,7 +174,7 @@ class CircuitFlow(nn.Module):
         super().__init__()
         if coupling not in ("coupled", "deferred") or type(source_routing) is not bool:
             raise ValueError("Unknown CircuitFlow coupling or routing")
-        if coarse_weighting not in ("electrical", "unit"):
+        if coarse_weighting not in ("electrical", "unit", "mean_token", "knockout"):
             raise ValueError("Unknown coarse-space weight mode")
         if (core.task != "PowerFlow" or core.num_layers != 12 or core.dropout != 0
                 or type(max_component_buses) is not int or max_component_buses < 1):
@@ -244,7 +256,8 @@ class CircuitFlow(nn.Module):
         coarse = electrical_coarse_space(
             bus_edges, raw_edge, pv, ref,
             max_component_buses=self.config["max_component_buses"],
-            weight_mode=self.config.get("coarse_weighting", "electrical"))
+            weight_mode=("electrical" if self.config.get("coarse_weighting") == "knockout"
+                         else self.config.get("coarse_weighting", "electrical")))
         conditioned = None
         if self.config.get("coarse_conditioning") == "masked_polar_rms_v1":
             from circuitflow.coarse_conditioning import prepare_conditioned_correction
@@ -255,6 +268,8 @@ class CircuitFlow(nn.Module):
                               harmonic_systems=coarse.prolongation.shape[0],
                               largest_component=coarse.prolongation.shape[-1],
                               fine_layers=core.num_layers, coarse_layers=core.num_layers)
+        if self.config.get("coarse_weighting") == "mean_token":
+            self.last_work.update(harmonic_setups=0, harmonic_systems=0, mean_token_setups=1)
         if conditioned is not None:
             self.last_work["conditioned_channel_ranks"] = [block.ranks for block in conditioned.blocks]
         senders, receivers = bus_edges
@@ -318,6 +333,8 @@ class CircuitFlow(nn.Module):
             prolongation = coarse if conditioned is None else conditioned
             global_delta = prolongation.prolong(self.coarse_head(coarse_hidden)) / core.num_layers
             global_delta = global_delta.masked_fill(~bus_mask, 0)
+            if self.config.get("coarse_weighting") == "knockout":
+                global_delta = global_delta * 0
             if self.config["coupling"] == "deferred":
                 global_sum = global_sum + global_delta
                 combined = controls(local_state + global_sum)
@@ -362,7 +379,8 @@ def construct_circuit_preset(preset, *, coupling="coupled", source_routing=True,
     result.metadata = {
         **{k: v for k, v in result.metadata.items() if k != "initialization_ablation"},
         "name": ("CircuitFlow-v1-" + ("" if preset == "tiny" else preset + "-") + coupling
-                 + ("-unit-coarse" if coarse_weighting == "unit" else "")),
+                 + ("-unit-coarse" if coarse_weighting == "unit" else
+                    "" if coarse_weighting == "electrical" else "-" + coarse_weighting)),
         "parent_model_module": result.metadata["model_module"], "model_module": __file__,
         "initialization": "Control-preserving flat state; zero local/global increment output layers",
         "parameter_count": sum(p.numel() for p in result.model.parameters()),

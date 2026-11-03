@@ -22,7 +22,7 @@ def digest(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def trainer_type():
+def trainer_type(*, variant="Unit", reference_path=REFERENCE, allocation_path=ALLOCATION):
     import random
     import shutil
     import time
@@ -38,19 +38,20 @@ def trainer_type():
     from circuitflow.genco.normalization import PowerScale
     from circuitflow.io import write_json
     from circuitflow.training import Trainer, numerical_runtime, permutation, source_identity, synchronized
+    weighting = {"Unit": "unit", "Knockout": "knockout", "MeanToken": "mean_token"}[variant]
 
     class MatchedUnit(Trainer):
         def __init__(self, root, job, manifest_path, device, threads):
-            reference = read(REFERENCE)
+            reference = read(reference_path)
             self.root, self.device, self.job = Path(root), device, job
-            if (job["case"] != "case30" or job["task"] != "1.3"
-                    or job["model_spec"] != reference["model_spec"]
+            if (job["case"] != "case30" or job["task"] != reference["task"]
+                    or job["model_spec"] != dict(reference["model_spec"], coarse_weighting=weighting)
                     or type(job["seed"]) is not int or job["seed"] not in (0, 1, 2)):
                 raise ValueError("The assigned job differs from the original three paired Unit controls")
             manifest_path = Path(manifest_path).resolve()
             manifest = read(manifest_path)
-            if manifest["case"] != "case30" or manifest["task"] != "1.3":
-                raise ValueError("This allocation is Case30 Mixed, not Intact or another grid")
+            if manifest["case"] != "case30" or manifest["task"] != reference["task"]:
+                raise ValueError("The manifest task differs from the original Full reference")
             self.train = load_pool(manifest_path, "train")
             original_val = load_pool(manifest_path, "val")
             for name, pool in (("train", self.train), ("val", original_val)):
@@ -59,16 +60,20 @@ def trainer_type():
                         or cache_identity(pool._data, pool.slices) != expected["semantic_sha256"]):
                     raise ValueError("The original ordered graph/label population differs: " + name)
             indices = reference["evaluation_indices"]
-            if (len(indices) != 450 or len(set(indices)) != 450
-                    or any(sum(index // 1800 == cohort for index in indices) != 150
-                           for cohort in range(3))):
-                raise ValueError("The original stratified DEV450 membership changed")
+            if reference["task"] == "1.3":
+                if (len(indices) != 450 or len(set(indices)) != 450
+                        or any(sum(index // 1800 == cohort for index in indices) != 150
+                               for cohort in range(3))):
+                    raise ValueError("The original stratified DEV450 membership changed")
+            elif reference["task"] != "1.1" or indices != list(range(5400)):
+                raise ValueError("The original Intact full-VAL5400 membership changed")
+            self.validation_population = "original_DEV450" if len(indices) == 450 else "original_VAL5400"
             self.val = [original_val.get(index) for index in indices]
             self.scale = PowerScale.from_dict(reference["power_scale"])
-            self.spec = ModelSpec(**reference["model_spec"])
+            self.spec = ModelSpec(**job["model_spec"])
             seed = job["seed"]
             initial_info = reference["initials"][str(seed)]
-            initial_path = REFERENCE.parent / initial_info["file"]
+            initial_path = reference_path.parent / initial_info["file"]
             if digest(initial_path) != initial_info["sha256"]:
                 raise ValueError("A published untrained Full initialization changed")
             initial = torch.load(initial_path, map_location="cpu", weights_only=True)
@@ -81,9 +86,9 @@ def trainer_type():
             torch.manual_seed(seed)
             self.runtime = construct(self.spec, "cpu")
             configuration = self.runtime.model.get_extra_state()
-            expected_configuration = dict(initial["model"]["_extra_state"], coarse_weighting="unit")
+            expected_configuration = dict(initial["model"]["_extra_state"], coarse_weighting=weighting)
             if configuration != expected_configuration:
-                raise ValueError("The architecture changed more than electrical-to-unit weighting")
+                raise ValueError("The architecture differs from the declared single control")
             state = dict(initial["model"], _extra_state=configuration)
             self.runtime.model.load_state_dict(state, strict=True)
             if tensor_identity(self.runtime.model.state_dict()) != initial_info["tensor_identity"]:
@@ -95,7 +100,12 @@ def trainer_type():
                                  *numpy_state[2:]))
             torch.set_rng_state(initial["torch"])
             if torch.device(device).type == "cuda":
-                torch.cuda.manual_seed(seed)
+                if initial.get("cuda"):
+                    if len(initial["cuda"]) != torch.cuda.device_count():
+                        raise ValueError("The original CUDA RNG requires the same visible device count")
+                    torch.cuda.set_rng_state_all(initial["cuda"])
+                else:
+                    torch.cuda.manual_seed(seed)
             self.adapter = PFAdapter(power_scale_pu=self.scale, generator_layout="aggregate_pf")
             self.optimizer = torch.optim.AdamW(
                 self.runtime.model.parameters(), lr=.0005, betas=(.9, .999),
@@ -106,7 +116,7 @@ def trainer_type():
             self.identity = dict(
                 job=job, recipe=reference["original_recipe"], source_sha256=source_identity(),
                 runner_sha256=digest(Path(__file__)), contract_helper_sha256=digest(ROOT / "case30_contract.py"),
-                full_reference_sha256=digest(REFERENCE), allocation_sha256=digest(ALLOCATION),
+                full_reference_sha256=digest(reference_path), allocation_sha256=digest(allocation_path),
                 data_manifest_sha256=digest(manifest_path), power_scale_sha256=self.scale.fingerprint,
                 runtime=numerical_runtime(device, threads),
                 scheduler_monitor=reference["scheduler_monitor"],
@@ -125,10 +135,14 @@ def trainer_type():
             self.disk_margin = 5 * 1024**3
             self.last_committed_step = 0
 
+        @property
+        def validation_count(self):
+            return len(self.val)
+
         def validation_step(self):
             progress = self.progress
             first = progress["val_cursor"]
-            stop = min(first + 64, 450)
+            stop = min(first + 64, self.validation_count)
             if not 0 <= first < stop:
                 raise ValueError("The DEV450 recovery cursor is outside its original population")
             synchronized(self.device)
@@ -144,11 +158,11 @@ def trainer_type():
             current_prediction = self.root / "DEV_CURRENT.npy"
             if first == 0:
                 predictions = np.lib.format.open_memmap(
-                    current_prediction, mode="w+", dtype=np.float32, shape=(450, 30, 2))
+                    current_prediction, mode="w+", dtype=np.float32, shape=(self.validation_count, 30, 2))
                 predictions[:] = np.nan
             else:
                 predictions = np.load(current_prediction, mmap_mode="r+", allow_pickle=False)
-                if (predictions.shape != (450, 30, 2) or predictions.dtype != np.float32
+                if (predictions.shape != (self.validation_count, 30, 2) or predictions.dtype != np.float32
                         or not np.isfinite(predictions[:first]).all()):
                     raise ValueError("The retained DEV prefix differs from its recovery cursor")
             predictions[first:stop] = outputs["bus"].detach().cpu().numpy().reshape(stop-first, 30, 2)
@@ -163,13 +177,13 @@ def trainer_type():
             progress["val_cursor"] = stop
             synchronized(self.device)
             progress["val_seconds"] += time.monotonic() - started
-            if stop < 450:
+            if stop < self.validation_count:
                 return False
             initial = progress["phase"] == "initial_val"
             epoch = 0 if initial else progress["epoch"]
-            observation = dict(epoch=epoch, count=450,
-                               native_loss=progress["val_loss_sum"] / 450,
-                               final_layer_physics=progress["val_physics_sum"] / 450,
+            observation = dict(epoch=epoch, count=self.validation_count,
+                               native_loss=progress["val_loss_sum"] / self.validation_count,
+                               final_layer_physics=progress["val_physics_sum"] / self.validation_count,
                                invalid_count=0)
 
             def retain_prediction(name):
@@ -220,7 +234,7 @@ def trainer_type():
             self.finish_selection()
             progress = self.progress
             if (progress["step"] != 152000 or progress["train_graphs"] != 9720000
-                    or progress["val_graphs"] != 201 * 450
+                    or progress["val_graphs"] != 201 * self.validation_count
                     or [row["epoch"] for row in progress["observations"]] != list(range(201))):
                 raise ValueError("The paired control has not completed its original fixed H200")
             latest = read(self.root / "LATEST.json")
@@ -247,13 +261,13 @@ def trainer_type():
             write_json(self.root / "COMPLETE.json", dict(
                 complete=True, identity=self.identity, progress=progress,
                 fixed_H200_sha256=digest(final), inference_sha256=digest(self.root / "inference.pt"),
-                validation_population="original_DEV450", TEST_calls=0,
+                validation_population=self.validation_population, TEST_calls=0,
                 backend_matched_to_original_CPU=False))
 
     return MatchedUnit
 
 
-def main():
+def main(argv=None, *, allocation_path=ALLOCATION, reference_path=REFERENCE, variant="Unit"):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path)
     parser.add_argument("--workspace", type=Path)
@@ -263,10 +277,12 @@ def main():
     parser.add_argument("--execute", action="store_true")
     parser.add_argument("--allocation-checked", action="store_true")
     parser.add_argument("--resume-existing", action="store_true")
-    args = parser.parse_args()
-    allocation = read(ALLOCATION)
+    args = parser.parse_args(argv)
+    allocation = read(allocation_path)
     seeds = [args.seed] if args.seed is not None else [0, 1, 2]
-    jobs = [authorize(allocation, seed, "Unit") for seed in seeds]
+    reference = read(reference_path)
+    regime = "Intact" if reference["task"] == "1.1" else "Mixed"
+    jobs = [authorize(allocation, seed, variant, regime) for seed in seeds]
     if not args.execute:
         print(json.dumps(dict(jobs=jobs, execution_started=False), indent=2))
         return 0
@@ -297,8 +313,10 @@ def main():
     torch.use_deterministic_algorithms(True)
     torch.set_float32_matmul_precision("highest")
     workspace.mkdir(parents=True, exist_ok=True)
-    trainer_class = trainer_type()
-    with FileLock(str(workspace / "CASE30_UNIT_COMPANY.lock"), timeout=0):
+    trainer_class = trainer_type(
+        variant=variant, reference_path=reference_path, allocation_path=allocation_path)
+    lock_name = "CASE30_UNIT_COMPANY.lock" if variant == "Unit" else f"CASE30_{variant}_COMPANY.lock"
+    with FileLock(str(workspace / lock_name), timeout=0):
         for job in jobs:
             folder = workspace / job["id"]
             if (folder / "COMPLETE.json").exists():
@@ -325,7 +343,7 @@ def main():
                     trainer.save_current()
                 write_json(folder / "OWNER.local.json", dict(
                     PID=os.getpid(), birth_unix=__import__("psutil").Process().create_time(),
-                    job_id=job["id"], full_reference_sha256=digest(REFERENCE)))
+                    job_id=job["id"], full_reference_sha256=digest(reference_path)))
                 try:
                     trainer.run()
                 except ControlledPause as error:

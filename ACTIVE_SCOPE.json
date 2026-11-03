@@ -7,7 +7,8 @@
     "case": "case500",
     "method": "FlowCAN",
     "task": "1.3",
-    "action": "Check existing completed and assigned original runs first; complete only genuinely missing declared runs, never duplicate them."
+    "action": "Laboratory-owned original native500 queue; company must not start replacement training.",
+    "new_company_training_authorized": false
   },
   "ablation_cases": ["case30"],
   "ablation_variants": ["Full reference reuse", "Deferred", "Unit weights", "Coarse knockout", "Mean-token global"],
@@ -18,6 +19,22 @@
     "case30-Mixed-Unit-seed2"
   ],
   "distributed_allocation": "CASE30_ALLOCATION.json",
+  "additional_training_coordinate_allowlist": [
+    "case30-Mixed-Knockout-seed0",
+    "case30-Mixed-Knockout-seed1",
+    "case30-Mixed-Knockout-seed2",
+    "case30-Mixed-MeanToken-seed0",
+    "case30-Mixed-MeanToken-seed1",
+    "case30-Mixed-MeanToken-seed2",
+    "case30-Intact-MeanToken-seed0",
+    "case30-Intact-MeanToken-seed1",
+    "case30-Intact-MeanToken-seed2"
+  ],
+  "additional_allocation": "CASE30_EXTRA_ALLOCATION.json",
+  "additional_execution_entrypoint": "run_case30_extra.sh",
+  "intact_full_matching_reference": "case30_intact_reference/FULL_REFERENCE.json",
+  "live_Unit_checkout_must_not_be_updated": true,
+  "intact_local_only_is_coarse_signal_knockout": true,
   "paired_control_execution_entrypoint": "case30_matched.py",
   "original_full_matching_reference": "case30_reference/FULL_REFERENCE.json",
   "old_five_seed_driver_execute_authorized": false,
@@ -26,6 +43,6 @@
   "default_factorial_depth_anchor_loss_or_extra_baseline_sweeps": false,
   "repeat_completed_main_training": false,
   "existing_jobs": "Preserve current full states and owners. Do not automatically stop, restart, overwrite or duplicate any running job.",
-  "evaluation_first": ["recover missing result packets", "canonical rPBL rescore", "existing-prediction tails and pass fractions"],
+  "evaluation_first": ["recover missing result packets", "N/N-1/N-2 raw MSE and PBL", "existing-prediction tails and pass fractions"],
   "new_experiment_activation": "Requires an exact verified gap and a bounded matching protocol. This scope does not activate the old company five-seed coordinates."
 }

@@ -54,7 +54,8 @@ def test_public_initial_is_the_original_tensor_set_with_only_unit_configuration_
     assert sum(parameter.numel() for parameter in runtime.model.parameters()) == reference["parameters"]
 
 
-def test_scheduler_uses_all_450_original_dev_cases_and_weights_the_tail(monkeypatch, tmp_path):
+@pytest.mark.parametrize("population", [450, 5400])
+def test_scheduler_uses_original_validation_population_and_weights_the_tail(monkeypatch, tmp_path, population):
     import circuitflow.api
     import torch_geometric.data
 
@@ -73,7 +74,7 @@ def test_scheduler_uses_all_450_original_dev_cases_and_weights_the_tail(monkeypa
     cls = case30_matched.trainer_type()
     trainer = cls.__new__(cls)
     trainer.root, trainer.device = tmp_path, "cpu"
-    trainer.val = list(range(450))
+    trainer.val = list(range(population))
     trainer.runtime, trainer.adapter = SimpleNamespace(model=model), None
     observed = []
     trainer.scheduler = SimpleNamespace(step=lambda value: observed.append(value))
@@ -82,11 +83,12 @@ def test_scheduler_uses_all_450_original_dev_cases_and_weights_the_tail(monkeypa
     trainer.progress = dict(phase="val", epoch=200, val_cursor=0, val_loss_sum=0.,
                             val_physics_sum=0., val_seconds=0., val_graphs=0,
                             attempted_val_graphs=0, observations=[], best=None)
-    for index in range(8):
-        assert trainer.validation_step() == (index == 7)
-    assert batches == [64] * 7 + [2]
-    assert observed == [sum((index + 1) * count for index, count in enumerate(batches)) / 450]
-    assert trainer.progress["val_graphs"] == 450
+    count = (population + 63) // 64
+    for index in range(count):
+        assert trainer.validation_step() == (index == count - 1)
+    assert batches == [64] * (count - 1) + [population % 64]
+    assert observed == [sum((index + 1) * size for index, size in enumerate(batches)) / population]
+    assert trainer.progress["val_graphs"] == population
     assert trainer.progress["phase"] == "done"
     assert trainer.progress["pending_best"]["epoch"] == 200
-    assert np.load(tmp_path / "dev_0200.npy", allow_pickle=False).shape == (450, 30, 2)
+    assert np.load(tmp_path / "dev_0200.npy", allow_pickle=False).shape == (population, 30, 2)

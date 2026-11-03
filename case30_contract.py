@@ -54,8 +54,8 @@ def cache_identity(data, slices):
     return hashlib.sha256(encoded.encode()).hexdigest()
 
 
-def authorize(allocation, seed, variant):
-    identifier = f"case30-Mixed-{variant}-seed{seed}"
+def authorize(allocation, seed, variant, regime="Mixed"):
+    identifier = f"case30-{regime}-{variant}-seed{seed}"
     jobs = [job for job in allocation["jobs"] if job["id"] == identifier]
     if len(jobs) != 1:
         raise ValueError("The exact coordinate is not in the distributed allocation")

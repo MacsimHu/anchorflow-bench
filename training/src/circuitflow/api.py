@@ -23,7 +23,7 @@ class ModelSpec:
             raise ValueError("Unknown model recipe")
         if self.coupling not in ("coupled", "deferred"):
             raise ValueError("Unknown feedback control")
-        if self.coarse_weighting not in ("electrical", "unit"):
+        if self.coarse_weighting not in ("electrical", "unit", "mean_token", "knockout"):
             raise ValueError("Unknown harmonic-basis control")
         if type(self.max_component_buses) is not int or self.max_component_buses < 1:
             raise ValueError("A positive component-size safety limit is required")
