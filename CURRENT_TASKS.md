@@ -1,3 +1,9 @@
+# 2026-11-05 update: A100 can claim Case500 CANOS takeover
+
+Two existing missing Mixed CANOS seeds (1/2) are now open for A100 readiness claims and explicit full-current-state takeover. They remain A5000-owned until a seed-specific release; do not duplicate training. See [CASE500_CANOS_A100_TASKS.md](CASE500_CANOS_A100_TASKS.md) and its two seed issues for the complete recipe, handoff and acceptance gates. The original company nine Mixed Case30 assignments are unchanged. This supersedes only the laboratory-exclusive CANOS assignment below; other cancellation and frozen-checkout protections remain effective.
+
+---
+
 # Current assignment: Mixed Case30 controls only
 
 CURRENT AUTHOR SCOPE -- 2026-11-04
