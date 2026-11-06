@@ -1,3 +1,9 @@
+# 2026-11-06 deadline update: CANOS takeover priority and completed Mixed controls
+
+Read [DEADLINE_COORDINATION_20261106.md](DEADLINE_COORDINATION_20261106.md) first. The original CANOS pair is not nearly finished; prepare parallel A100 full-state takeover now, but A5000 remains owner until actual private state receipt and seed-specific release. No duplicate or guessed runner. Preserve the company's already-running Deferred CUDA cohort separately from the laboratory CPU cohort. Return the nine existing Unit/Knockout/MeanToken TEST artifacts; do not retrain. Intact Case30 is optional only after these priorities; FlowCAN remains withdrawn.
+
+---
+
 # Case500 Mixed CANOS: A100 takeover of missing seeds 1 and 2
 
 Updated: 2026-11-05. This adds two existing missing baseline coordinates.
