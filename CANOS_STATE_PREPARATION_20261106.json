@@ -1,0 +1,45 @@
+{
+  "scientific_scope_sha256": "ee671a60603b4ff8642bf2c6b8afc719ff7900506ff7321ebb5c725ae03e0a8b",
+  "source_member_count": 92,
+  "source_closure_staged_privately": true,
+  "states": {
+    "1": {
+      "coordinate": "canos_task13_seed1",
+      "step": 18620,
+      "packet_sha256": "ec1f161627500d16d30d6b06509060f82362beece3128f58bd5a4fcd4d0923ca",
+      "checkpoint_sha256": "ab4d0683122b1a15b506bb15d18d5dc4f9a9e3fa4f5750cd0087513165366db0",
+      "bytes": 174134308,
+      "all_packet_members_verified": true,
+      "member": "seed1_latest_packet.zip",
+      "checkpoint_member": "current_a.pt",
+      "current_remote_ACK_step": 18430,
+      "current_remote_ACK_sha256": "65b803cda3935a0ce9a5e080e4488e515158889e2ad7c5b119a98f2b1470b3e8",
+      "is_exactly_current_ACK": false,
+      "latest_at_snapshot_not_a_release": true
+    },
+    "2": {
+      "coordinate": "canos_task13_seed2",
+      "step": 22800,
+      "packet_sha256": "c923cdc1c4b0025ed89e53f575522ce4bd06030417846a83e94bdddaf5b4d1c1",
+      "checkpoint_sha256": "99adc44a2fa105cecaa77cd368d11f8a205f1c46b1fe0049e16b8ea478d044b2",
+      "bytes": 174022580,
+      "all_packet_members_verified": true,
+      "member": "seed2_latest_packet.zip",
+      "checkpoint_member": "current_b.pt",
+      "current_remote_ACK_step": 22610,
+      "current_remote_ACK_sha256": "50a1cca0c524175d8fdac63b1a65cb7a570430afeab055f244a34bb00b16c7a0",
+      "is_exactly_current_ACK": false,
+      "latest_at_snapshot_not_a_release": true
+    }
+  },
+  "no_datasets_or_private_paths_published": true,
+  "owner_release": false,
+  "receiving_A100_qualified": false,
+  "still_required": [
+    "Actual A100 readiness and private receipt",
+    "Latest exact E/F full-current-state ACK at saved-boundary release",
+    "Explicit original owner exit and seed-specific release",
+    "Frozen receiving path/runtime adapter and current-state next-update qualification"
+  ],
+  "caution": "These are snapshots, not a permission to start or an assertion of a complete received runnable bundle."
+}
